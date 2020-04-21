@@ -10,3 +10,14 @@ const colors = ["red", "orange", "yellow", "green", "pink", "black", "gray", "bl
 
 // You must console the colors array.
 // NO for loops!
+const colorArray = colors.map(color => color); 
+
+colorArray.forEach((color) => {
+    const spectrum = ['red', 'orange', 'yellow', 'green', 'blue', 'violet'];
+
+    if (!spectrum.includes(color)) {
+        const currentPos = colors.indexOf(color);
+        colors.splice(currentPos, 1);
+    }
+});
+colors.forEach((item) => console.log(item));

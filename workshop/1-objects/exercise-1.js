@@ -48,7 +48,11 @@
 // represent a collection of similar things?
 
 var favoriteMovie = {
-
+    title: "Blade Runner 2049",
+    director: "Denis Villeneuve",
+    yearReleased: 2017,
+    ratings: "8/10",
+    actors: ["Ryan Gosling", "Harrison Ford", "Ana de Armas", "Jared Leto"],
 }
 
 
@@ -68,6 +72,8 @@ const person = {
 person[age];    // => 26
 person.key;     // => "Alyssa P. Hacker"
 
+console.log(person.age); 
+console.log(person['name']); 
 
 //-------------------------------------------------
 
@@ -90,7 +96,7 @@ const alyssa = {
 
 function fullName(person) {
     // Your code here
-
+    return `${person.first} ${person.middle} ${person.last}`;
 }
 
 console.log(fullName(alyssa)); // => "Alyssa P. Hacker"
@@ -115,7 +121,7 @@ const rick = {
 
 function betterFullName(person) {
     // Your code here
-
+    return `${person.first} ${person.middle || ''} ${person.last}`;
 }
 
 console.log(betterFullName(rick)); // => "Rick Sanchez"
